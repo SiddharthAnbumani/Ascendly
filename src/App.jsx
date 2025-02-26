@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
-import { MakeNavbar } from './MakeNavbar'
+import { MakeNavbar } from './components/MakeNavbar'
 import Home from './Home'
-import BucketListItem from './BucketListItem';
-import NewBucketListItem from './NewBucketListItem';
+import BucketListItem from './components/BucketListItem';
+import NewBucketListItem from './components/NewBucketListItem';
 import { useState, useEffect} from 'react';
 import { createContext, useContext } from 'react';
-import AscendContext from './AscendContext';
+import AscendContext from './components/AscendContext';
 
 function App() {
 
@@ -41,14 +41,7 @@ function App() {
         <Route 
         path='/new'
         element={
-        <NewBucketListItem 
-        // ascend={ascend} 
-        // setAscend={setAscend} 
-        // Category={Category} 
-        // setCategory={setCategory}
-        // ascends={ascends}
-        // setAscends={setAscends}
-        />}/>
+        <NewBucketListItem/>}/>
 
         <Route 
         path='/show' 
