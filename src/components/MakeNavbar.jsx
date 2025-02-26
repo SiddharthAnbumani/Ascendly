@@ -7,7 +7,7 @@ import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 export const MakeNavbar = () => {
   return (
     <div>
-        <Navbar bg="dark" data-bs-theme="dark">
+        <Navbar bg="danger" data-bs-theme="dark">
         <Container>
           <Navbar.Brand as={Link} to='/'>Ascendly</Navbar.Brand>
           <Nav className="me-auto">
