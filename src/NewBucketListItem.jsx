@@ -1,17 +1,29 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { useNavigate } from "react-router-dom"
+import AscendContext from "./AscendContext"
 
-export default function NewBucketListItem({ascend,
-    setAscend,
-    category,
-    setCategory, 
-    ascends, 
-    setAscends}){
+
+export default function NewBucketListItem(
+    // {ascend,
+    // setAscend,
+    // category,
+    // setCategory, 
+    // ascends, 
+    // setAscends}
+){
 
         const navigate = useNavigate()
     // const [ascend, setAscend] = useState([])
     // const [ascends, setAscends] = useState([])
     // const [Category, setCategory] = useState('select')
+    const {
+        ascend,
+        setAscend,
+        ascends,
+        setAscends,
+        category,
+        setCategory
+    } = useContext(AscendContext)
 
     const handleAddAscend = (evt)=>{
         evt.preventDefault()

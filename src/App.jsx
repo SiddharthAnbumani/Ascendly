@@ -5,21 +5,34 @@ import Home from './Home'
 import BucketListItem from './BucketListItem';
 import NewBucketListItem from './NewBucketListItem';
 import { useState, useEffect} from 'react';
+import { createContext, useContext } from 'react';
+import AscendContext from './AscendContext';
 
 function App() {
 
 
   const [ascend, setAscend] = useState([])
   const [ascends, setAscends] = useState([])
-  const [Category, setCategory] = useState('select')
+  const [category, setCategory] = useState('select')
 
   useEffect(() => {
     console.log("Ascends updated:", ascends);
   }, [ascends]);
+
+
   
 
   return (
-    <BrowserRouter>
+    <AscendContext.Provider 
+    value={{
+      ascend,
+      setAscend,
+      ascends,
+      setAscends,
+      category,
+      setCategory}
+    }>
+      <BrowserRouter>
       <MakeNavbar/>
 
       <Routes>
@@ -29,12 +42,13 @@ function App() {
         path='/new'
         element={
         <NewBucketListItem 
-        ascend={ascend} 
-        setAscend={setAscend} 
-        Category={Category} 
-        setCategory={setCategory}
-        ascends={ascends}
-        setAscends={setAscends}/>}/>
+        // ascend={ascend} 
+        // setAscend={setAscend} 
+        // Category={Category} 
+        // setCategory={setCategory}
+        // ascends={ascends}
+        // setAscends={setAscends}
+        />}/>
 
         <Route 
         path='/show' 
@@ -43,6 +57,7 @@ function App() {
         ascending={ascends}/>}/>
       </Routes>
     </BrowserRouter>
+    </AscendContext.Provider>
   )
 }
 
