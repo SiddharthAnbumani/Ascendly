@@ -31,60 +31,7 @@ export default function NewBucketListItem(){
     }
 
     return(
-        // <Container>
-        //     <Row>
-        //         <Col>
-        //         <Form>
-
-        //         <label htmlFor=""> New Ascend: </label>
-        //         <input 
-        //         type="text" 
-        //         value={ascend}
-        //         onChange={(evt)=>
-        //         setAscend(evt.target.value)}/><br/>
-
-        //         <label htmlFor="">Category: </label>
-
-        //         <select 
-        //         name="" 
-        //         id="" 
-        //         value={category}
-        //         onChange={
-        //             (evt)=> 
-        //             setCategory(evt.target.value)}>
-
-        //             <option 
-        //             value='select'>
-        //                 --select--
-        //             </option>
-
-        //             <option 
-        //             value="Travel & Adventure">
-        //                 Travel & Adventure
-        //             </option>
-        //             <option 
-        //             value="Personal Growth">
-        //                 Personal Growth 
-        //             </option>
-        //             <option 
-        //             value="Health & Fitness">
-        //                 Health & Fitness
-        //             </option>
-
-        //         </select><br/>
-
-        //         <button 
-        //         type="submit"
-        //         onClick={handleAddAscend}>
-        //             Add Ascend
-        //         </button>
-        //     </Form>
-        //         </Col>
-        //     </Row>
-            
-        // </Container>
-
-
+    
     <Container className=''>
     <Form onSubmit={handleAddAscend} className="p-4">
       
