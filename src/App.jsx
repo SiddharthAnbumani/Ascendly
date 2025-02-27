@@ -12,8 +12,8 @@ function App() {
 
 
   const [ascend, setAscend] = useState([])
-  const [ascends, setAscends] = useState([])
   const [category, setCategory] = useState('select')
+  const [ascends, setAscends] = useState([])
 
   useEffect(() => {
     console.log("Ascends updated:", ascends);
@@ -48,6 +48,7 @@ function App() {
         element={
         <BucketListItem
         ascending={ascends}/>}/>
+
       </Routes>
     </BrowserRouter>
     </AscendContext.Provider>
